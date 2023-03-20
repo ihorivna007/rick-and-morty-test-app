@@ -1,0 +1,46 @@
+.table {
+  width: 312px;
+  
+  @include onDesktop {
+    width: 413px;
+  }
+
+  &__info {
+    margin: 35px 0 16px;
+
+    @include onDesktop {
+      margin: 48px 0;
+      text-align: center;
+    }
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #8E8E93;
+  }
+
+  &__row {
+    box-sizing: border-box;
+    padding: 0 16px;
+    height: 64px;
+    border-bottom: 1px rgba(33, 33, 33, 0.08) solid;
+
+    &-title {
+      padding-top: 9px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: #081F32;
+    }
+
+    &-data {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.25px;
+      color: #6E798C;
+    }
+  }
+}

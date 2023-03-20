@@ -1,0 +1,17 @@
+.header {
+  margin-top: 92px;
+
+  @include onDesktop {
+    margin-top: 86px;
+  }
+
+  &__logo {
+    width: 312px;
+    height: 104px;
+
+    @include onDesktop {
+      width: 600px;
+      height: 200px;
+    }
+  }
+}

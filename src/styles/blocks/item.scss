@@ -1,0 +1,61 @@
+.item {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 4px;
+  border-radius: 4px;
+
+  width: 100%;
+  @include onDesktop {
+    width: $character-width;
+  }
+
+  cursor: pointer;
+  transition: all 0.3s;
+  
+  box-shadow: 
+    0px 1px 5px rgba(0, 0, 0, 0.2), 
+    0px 3px 4px rgba(0, 0, 0, 0.12), 
+    0px 2px 4px rgba(0, 0, 0, 0.14);
+
+  &:hover {
+    box-shadow: 
+    0px 1px 5px rgba(0, 0, 0, 0.4), 
+    0px 3px 4px rgba(0, 0, 0, 0.32), 
+    0px 2px 4px rgba(0, 0, 0, 0.34);
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__image {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    height: 233px;
+    @include onDesktop {
+      height: 170px;
+    }
+  }
+  
+  &__title {
+    padding: 12px 16px;
+  }
+  
+  &__name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+  
+  &__species {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}

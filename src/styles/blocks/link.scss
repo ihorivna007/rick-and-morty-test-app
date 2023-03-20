@@ -1,0 +1,32 @@
+@import '../mixins';
+
+.link {
+  padding: 27px 0 0 28px;
+  
+  @include onDesktop {
+    padding: 25px 0 0 54px;
+  }
+
+  // width: 115vh;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    background-size: 100%;
+    background-image: url(../../images/left-arrow.png);
+  }
+
+  &__go-back {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: 'Karla', sans-serif;
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+}

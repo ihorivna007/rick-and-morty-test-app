@@ -1,0 +1,32 @@
+.home {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: $mobile-width;
+
+  @include onDesktop {
+    max-width: 1020px;
+  }
+
+  &__header {
+    margin-top: 86px;
+  }
+
+  &__gallery {
+    display: flex;
+    gap: 32px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 32px 0;
+    max-width: $mobile-width;
+    min-width: $mobile-width;
+    
+    @include onDesktop {
+      padding-top: 64px;
+      gap: $character-gap;
+      max-width: $character-width * 4 + $character-gap * 3;
+      min-width: $character-width * 4 + $character-gap * 3;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.filterbar {
+  padding: 16px 0;
+  margin-top: 30px;
+  border-radius: 8px;
+  width: 100%;
+  border: 0.7px solid grey;
+  color: rgba(0, 0, 0, 0.54);
+
+  &__icon {
+    padding: 20px;
+    font-size: 16px;
+    vertical-align: text-bottom;
+    background-image: url(../../images/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+  }
+  
+  &__input{
+    border: none;
+    outline: none;
+    line-height: 150%;
+    width: calc(100% - 50px);
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+}

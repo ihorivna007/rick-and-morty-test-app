@@ -1,0 +1,42 @@
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image{
+    width: 150px;
+    height: 148px;
+    margin-top: 50px;
+
+    @include onDesktop {
+      width: 300px;
+      height: 300px;
+      margin-top: 25px;
+    }
+
+    border: 5px solid #F2F2F7;
+    border-radius: 150px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  &__name {
+    width: 312px;
+    font-size: 32px;
+    line-height: 38px;
+    margin-top: 34px;
+
+    @include onDesktop {
+      width: 500px;
+      font-size: 48px;
+      line-height: 56px;
+      margin-top: 16px;
+    }
+
+    color: #081F32;
+    text-align: center;
+  }
+}
+
+
