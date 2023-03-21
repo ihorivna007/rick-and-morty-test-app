@@ -10,7 +10,7 @@ export class Home extends React.Component {
   state = {
     characters: [],
   };
-  
+
   async componentDidMount() {
     charactersFromServer = await getCharacters();
     localStorage.setItem('characters', JSON.stringify(charactersFromServer));
@@ -22,7 +22,7 @@ export class Home extends React.Component {
   }
 
   inputProcessing = (event) => {
-    const inputData = event.target.value.toLowerCase();
+    const inputData = event.target.value;
 
     this.keepFilterLogic(inputData);
     localStorage.setItem('filter', inputData);
@@ -31,7 +31,7 @@ export class Home extends React.Component {
   keepFilterLogic = (data) => {
     this.setState({
       characters: charactersFromServer.filter(
-        character => character.name.toLowerCase().includes(data)
+        character => character.name.toLowerCase().includes(data.toLowerCase())
       ),
     });
   }
@@ -56,7 +56,7 @@ export class Home extends React.Component {
         <div className='home__filterbar filterbar'>
           <span className='filterbar__icon'></span>
           <input 
-            type='search' 
+            type='text' 
             className='filterbar__input'
             placeholder='Filter by name...'
             onChange={this.inputProcessing}
