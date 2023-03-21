@@ -7,7 +7,7 @@ const titleFormating = (str) => {
 }
 
 export const Character = () => {
-  const id = ((window.location.pathname).split('/')[2]) - 1;
+  const id = (window.location.hash).split('/')[2] - 1;
   const allCharacters 
     = JSON.parse(localStorage.getItem("characters") || "[]");
   const currentCharacter = allCharacters[id];
@@ -24,7 +24,7 @@ export const Character = () => {
         <div
           className="character__image"
           style={{backgroundImage: `url(${currentCharacter.image})`}}
-          alt='Rick and Morty'>
+          alt={currentCharacter.name}>
         </div>
     
         <p className="character__name">{currentCharacter.name}</p>
@@ -35,11 +35,11 @@ export const Character = () => {
           {titles.map(title => (
             <div className="table__row" key={title}> 
               <div className="table__row-title">
-              {titleFormating(
-                title !== 'species' 
-                  ? title
-                  : title.slice(0, -1)
-              )}
+                {titleFormating(
+                  title !== 'species' 
+                    ? title
+                    : title.slice(0, -1)
+                )}
               </div>
 
               <div className="table__row-data">

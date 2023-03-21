@@ -6,7 +6,10 @@ export const Gallery = ({ characters }) => (
     .sort((a, b) => a.name.localeCompare(b.name))
     .map(character => (
       <div className='gallery__item item' key={character.id}>
-        <Link to={`/character/${character.id}`} className='item__link'>
+        <Link 
+          to={`/character/${character.id}`}
+          className='item__link'
+        >
           <div>
             <div 
               className='item__image' 

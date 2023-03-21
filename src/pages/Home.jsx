@@ -29,14 +29,11 @@ export class Home extends React.Component {
   }
 
   keepFilterLogic = (data) => {
-    this.setState(
-      {
-        characters: charactersFromServer
-          .filter(
-            character => character.name.toLowerCase().includes(data)
-          ),
-      }
-    );
+    this.setState({
+      characters: charactersFromServer.filter(
+        character => character.name.toLowerCase().includes(data)
+      ),
+    });
   }
 
   componentDidUpdate() {
@@ -47,7 +44,6 @@ export class Home extends React.Component {
     const {characters} = this.state;
 
     return (
-      
       <div className='home page'>
         <div className='home__header header'>
           <img 
